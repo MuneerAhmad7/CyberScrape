@@ -28,22 +28,27 @@ web-scraper-oolkit/
 ## 🧰 Features
 
 ### 1. Basic HTML Scraper
-Scrapes all visible text and page content.
+- Fetches raw HTML content from the given URL.
+- Saves the output to `output_basic.txt`.
 
 ### 2. Email Harvester
-Extracts email addresses from the target URL.
+- Extracts email addresses using regex from a web page.
+- Saves results to `output_emails.txt`.
 
 ### 3. Scrape with Proxy
-Scrapes pages using random proxy servers.
+- Fetches HTML content using a user-specified proxy.
+- Good for bypassing geo-blocks or IP bans.
 
 ### 4. JavaScript DOM Scraper (Selenium)
-Executes JS content using Selenium and extracts visible page content + page title.
+- Uses `selenium` and `ChromeDriver` to load dynamic content (JavaScript-rendered).
+- Captures page title and partial HTML source.
+- Useful for scraping SPAs or content behind JavaScript.
 
 ### 5. Deep Metadata & File Extractor
-- Extracts `<meta>` tags
-- Searches for file links:
-  - `.pdf`, `.docx`, `.xls`, `.zip`
-- Saves results in a timestamped file
+- Extracts all `<meta>` tags from the page (SEO, social, viewport, etc.).
+- Searches and lists downloadable file links with these extensions:
+  - `.pdf`, `.docx`, `.zip`, `.xls`
+- Saves results to `output_deep_metadata.txt`.
 
 ---
 
