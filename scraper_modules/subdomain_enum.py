@@ -13,11 +13,11 @@ def run(target_url):
     os.makedirs("temp_enum", exist_ok=True)
 
     print("🔎 Running subfinder...")
-    subfinder_cmd = ["subfinder", "-d", target_url, "-silent"]
+    subfinder_cmd = ["subfinder", "-d", target_url, ]
     subfinder_out = subprocess.run(subfinder_cmd, capture_output=True, text=True).stdout
 
     print("🔎 Running findomain...")
-    findomain_cmd = ["findomain", "-t", target_url, "-q"]
+    findomain_cmd = ["findomain", "-t", target_url, ]
     findomain_out = subprocess.run(findomain_cmd, capture_output=True, text=True).stdout
 
     print("🔎 Running sublist3r...")
@@ -41,7 +41,7 @@ def run(target_url):
 
     # Step 2: Probe live domains
     print("\n⚡ Probing live domains with httpx...")
-    httpx_cmd = ["httpx", "-silent", "-l", "temp_enum/all_subdomains.txt", "-o", "temp_enum/live.txt"]
+    httpx_cmd = ["httpx", "-l", "temp_enum/all_subdomains.txt", "-o", "temp_enum/live.txt"]
     subprocess.run(httpx_cmd)
 
     with open("temp_enum/live.txt", "r") as f:
