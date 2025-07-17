@@ -1,0 +1,31 @@
+# 🛡️ CyberScrape Toolkit
+
+An advanced modular web scraping framework tailored for cybersecurity professionals. It helps extract structured data, detect vulnerabilities, and analyze metadata using both static and dynamic scraping techniques.
+
+## 🚀 Features
+
+- Basic HTML scraping
+- Email harvesting
+- Proxy-based scraping
+- JavaScript-rendered DOM scraping (via Selenium)
+- Metadata and downloadable file discovery
+
+## 🛠️ How to Use
+
+1. Create a virtual environment:
+python3 -m venv venv
+source venv/bin/activate
+
+2. Install requirements:
+pip install -r requirements.txt
+
+3. Run the tool:
+python3 webscraper.py
+
+## 📂 Modules
+
+Each scraper module is located in the `scraper_modules/` folder.
+
+## 📌 Note
+
+Ensure you have `chromedriver` installed and accessible in your system PATH for Selenium modules.
