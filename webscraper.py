@@ -1,11 +1,11 @@
 # webscraper.py (Main Menu Interface)
 import importlib
-from scraper_modules import basic, email, proxy_scraper, selenium_js, deep_metadata, subdomain_enum
+from scraper_modules import basic, email, proxy, selenium_js, deep_metadata, subdomain_enum
 
 modules = {
     "1": ("basic", basic),
     "2": ("email", email),
-    "3": ("proxy_scraper", proxy_scraper),
+    "3": ("proxy", proxy),
     "4": ("selenium_js", selenium_js),
     "5": ("deep_metadata", deep_metadata),
     "6": ("subdomain_enum", subdomain_enum),
