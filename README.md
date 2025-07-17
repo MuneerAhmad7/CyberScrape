@@ -14,12 +14,14 @@ An advanced modular web scraping framework tailored for cybersecurity profession
 
 1. Create a virtual environment:
 python3 -m venv venv
+
+2.Actice the virtual enviroment:
 source venv/bin/activate
 
-2. Install requirements:
+3. Install requirements:
 pip install -r requirements.txt
 
-3. Run the tool:
+4. Run the tool:
 python3 webscraper.py
 
 ## 📂 Modules
