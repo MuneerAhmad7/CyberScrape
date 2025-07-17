@@ -1,41 +1,42 @@
 # 🛡️ CyberScrape Toolkit
 
-An advanced modular web scraping framework tailored for cybersecurity professionals. It helps extract structured data, detect vulnerabilities, and analyze metadata using both static and dynamic scraping techniques.
+CyberScrape is a modular, CLI-based web scraping toolkit built in Python. It allows users to scrape HTML content, extract emails, navigate JavaScript-heavy websites, extract deep metadata, and download common file types — all from a simple menu interface.
+
+---
 
 ## 🚀 Features
 
-- Basic HTML scraping
-- Email harvesting
-- Proxy-based scraping
-- JavaScript-rendered DOM scraping (via Selenium)
-- Metadata and downloadable file discovery
+### 1. Basic HTML Scraper
+- Fetches raw HTML content from the given URL.
+- Saves the output to `output_basic.txt`.
 
-## 🛠️ How to Use
+### 2. Email Harvester
+- Extracts email addresses using regex from a web page.
+- Saves results to `output_emails.txt`.
 
-1. Create a virtual environment:
+### 3. Scrape with Proxy
+- Fetches HTML content using a user-specified proxy.
+- Good for bypassing geo-blocks or IP bans.
+
+### 4. JavaScript DOM Scraper (Selenium)
+- Uses `selenium` and `ChromeDriver` to load dynamic content (JavaScript-rendered).
+- Captures page title and partial HTML source.
+- Useful for scraping SPAs or content behind JavaScript.
+
+### 5. Deep Metadata & File Extractor
+- Extracts all `<meta>` tags from the page (SEO, social, viewport, etc.).
+- Searches and lists downloadable file links with these extensions:
+  - `.pdf`, `.docx`, `.zip`, `.xls`
+- Saves results to `output_deep_metadata.txt`.
+
+---
+
+## 🧰 Requirements
+
+Make sure Python 3.8+ is installed.
+
+### Install Dependencies:
+```bash
 python3 -m venv venv
-
-2. Actice the virtual enviroment:
 source venv/bin/activate
-
-3. Install requirements:
 pip install -r requirements.txt
-
-4. Run the tool:
-python3 webscraper.py
-
-## 📂 Modules
-
-Each scraper module is located in the `scraper_modules/` folder.
-
-## 📌 Note
-
-Ensure you have `chromedriver` installed and accessible in your system PATH for Selenium modules.
-
-# Download latest Chrome .deb package
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-
-# Install it
-sudo apt install ./google-chrome-stable_current_amd64.deb -y
-
-sudo mv chromedriver /usr/local/bin/
