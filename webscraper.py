@@ -1,46 +1,36 @@
+# webscraper.py (Main Menu Interface)
 import importlib
-import os
+from scraper_modules import basic, email, proxy_scraper, selenium_js, deep_metadata, subdomain_enum
 
-def install_dependencies():
-    os.system("pip install -r requirements.txt")
+modules = {
+    "1": ("basic", basic),
+    "2": ("email", email),
+    "3": ("proxy_scraper", proxy_scraper),
+    "4": ("selenium_js", selenium_js),
+    "5": ("deep_metadata", deep_metadata),
+    "6": ("subdomain_enum", subdomain_enum),
+}
 
 def main():
-    print("🛡️ CyberScrape Toolkit: Python Interface")
-    print("========================================")
-    print("1. Basic HTML Scraper")
-    print("2. Email Harvester")
-    print("3. Scrape with Proxy")
-    print("4. JavaScript DOM Scraper (Selenium)")
-    print("5. Deep Metadata & File Extractor")
-    print("========================================")
+    print("""
+🛡️ CyberScrape Toolkit: Python Interface
+========================================
+1. Basic HTML Scraper
+2. Email Harvester
+3. Scrape with Proxy
+4. JavaScript DOM Scraper (Selenium)
+5. Deep Metadata & File Extractor
+6. Subdomain Enumerator + Recon
+========================================
+    """)
 
-    choice = input("Enter your choice (1-5): ")
-
-    if choice not in ['1', '2', '3', '4', '5']:
-        print("❌ Invalid choice.")
-        return
-
-    install_dependencies()
-
-    url = input("Enter target URL: ").strip()
-
-    if choice == '3':
-        proxy = input("Enter proxy (ip:port): ").strip()
-        args = (url, proxy)
+    choice = input("Enter your choice (1-6): ").strip()
+    if choice in modules:
+        url = input("Enter target URL: ").strip()
+        print(f"\n🚀 Running: {modules[choice][0]}\n")
+        modules[choice][1].run(url)
     else:
-        args = (url,)
-
-    modules = {
-        '1': 'scraper_modules.basic',
-        '2': 'scraper_modules.email',
-        '3': 'scraper_modules.proxy',
-        '4': 'scraper_modules.selenium_js',
-        '5': 'scraper_modules.deep_metadata'
-    }
-
-    print(f"\n🚀 Running: {modules[choice].split('.')[-1]}")
-    module = importlib.import_module(modules[choice])
-    module.run(*args)
+        print("❌ Invalid choice.")
 
 if __name__ == "__main__":
     main()
