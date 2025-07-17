@@ -154,6 +154,11 @@ python3 webscraper.py
 # Choose: 5
 # Enter target URL: https://example.com
 ```
+### 6. Subdomain Enumerator + Recon
+- Uses `subfinder`, `findomain`, and `sublist3r` to gather subdomains.
+- Checks live domains using `httpx`.
+- Resolves IPs and performs basic `nmap` scans.
+- Saves results to `subdomain_recon_*.txt`
 
 ---
 
