@@ -31,3 +31,9 @@ Each scraper module is located in the `scraper_modules/` folder.
 ## 📌 Note
 
 Ensure you have `chromedriver` installed and accessible in your system PATH for Selenium modules.
+
+# Download latest Chrome .deb package
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+
+# Install it
+sudo apt install ./google-chrome-stable_current_amd64.deb -y
