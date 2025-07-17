@@ -26,11 +26,15 @@ CyberScrape is a modular, CLI-based web scraping toolkit built in Python. It all
 Ensure your installed ChromeDriver matches your Chrome browser version.
 
 For Debian/Kali:
-sudo apt install -y unzip
-wget https://storage.googleapis.com/chrome-for-testing-public/138.0.7204.157/linux64/chromedriver-linux64.zip
-unzip chromedriver-linux64.zip
-mv chromedriver-linux64/chromedriver ./chromedriver
-chmod +x chromedriver
+- sudo apt install -y unzip
+
+- wget https://storage.googleapis.com/chrome-for-testing-public/138.0.7204.157/linux64/chromedriver-linux64.zip
+
+- unzip chromedriver-linux64.zip
+
+- mv chromedriver-linux64/chromedriver
+- ./chromedriver
+- chmod +x chromedriver
 
 ### 5. Deep Metadata & File Extractor
 - Extracts all `<meta>` tags from the page (SEO, social, viewport, etc.).
