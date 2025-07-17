@@ -1,8 +1,9 @@
+# scraper_modules/basic.py
+
 import requests
 from bs4 import BeautifulSoup
 from urllib.parse import urlparse
 import re
-
 
 def basic_scraper(target_url):
     try:
@@ -86,7 +87,5 @@ def basic_scraper(target_url):
     except requests.exceptions.RequestException as e:
         print(f"❌ Error: {e}")
 
-
-def run():
-    target_url = input("Enter target URL: ")
+def run(target_url):
     basic_scraper(target_url)
