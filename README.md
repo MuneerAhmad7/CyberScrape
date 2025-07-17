@@ -8,7 +8,7 @@ It offers features like HTML scraping, email harvesting, JS-based DOM scraping v
 ## 📁 Project Structure
 
 ```
-web-scraper-oolkit/
+CyberScrape
 ├── scraper_modules/
 │   ├── basic.py
 │   ├── email.py
@@ -57,8 +57,8 @@ web-scraper-oolkit/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/web-scraper-oolkit.git
-cd web-scraper-oolkit
+git clone https://github.com/MuneerAhmad7/CyberScrape.git
+cd CyberScrape
 ```
 
 ### 2. Set Up Python Virtual Environment
